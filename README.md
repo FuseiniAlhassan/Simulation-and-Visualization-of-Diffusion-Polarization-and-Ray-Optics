@@ -4,3 +4,7 @@
 
 
 ![](figures_diffusion/msd_vs_time.png)
+
+
+
+![](figures_ray_tracing/ray_propagation.gif)
