@@ -44,8 +44,98 @@ This codebase serves as an educational toolkit for visualizing key physical phen
 ![](figures_ray_tracing/ray_propagation.gif)
 
 
+A pair of Python scripts to explore basic physics simulations:
+
+- **random_walk_diffusion.py**: Simulates a 1D/2D random walk of multiple particles, computes mean squared displacement (MSD), compares to theoretical diffusion, and generates plots and an animation.  
+- **optics_simulation_full.py**: Tracks polarization states via Jones calculus, performs 2D ray tracing through thin lenses, and produces static plots plus an animation of ray propagation.
 
 
+## Features
+
+- Monte Carlo simulation of particle diffusion with MSD calculation  
+- Comparison of simulated MSD against theoretical predictions  
+- Animated 2D random walk saved as a GIF  
+- Polarization manipulation using Jones matrices (linear, quarter-wave, half-wave, polarizer)  
+- 2D ray tracing through configurable thin lenses  
+- Static and animated visualizations for optics processes  
+
+
+## Dependencies
+
+- Python 3.6 or higher  
+- NumPy  
+- Matplotlib  
+- Pillow (for GIF export)  
+
+
+
+## Installation
+
+
+3. Install required packages  
+
+  pip install numpy matplotlib pillow
+
+## Usage
+
+All figures and animations are saved under dedicated folders. Run each script independently:
+
+ **Diffusion simulation**  
+
+  python random_walk_diffusion.py
+ 
+
+- **Optics simulation**  
+
+  python optics_simulation_full.py
+
+
+
+ **Parameters**  
+  - `N_particles`: Number of particles  
+  - `N_steps`: Number of time steps  
+  - `dim`: Dimensionality (1 or 2)  
+  - `step_size`: Size of each random step  
+
+- **Workflow**  
+  1. Initialize all particles at the origin  
+  2. Perform random ±step moves each axis  
+  3. Record position history and compute MSD  
+  4. Plot simulated vs theoretical MSD  
+  5. Animate 2D trajectories and save as GIF  
+
+- **Output**  
+  - `figures_diffusion/msd_vs_time.png`  
+  - `figures_diffusion/random_walk_2d.gif`  
+
+### optics_simulation_full.py
+
+- **Polarization Tracking**  
+  - Defines Jones vectors for horizontal, vertical, linear polarization  
+  - Builds Jones matrices for quarter-wave, half-wave plates, and a polarizer  
+  - Applies sequence to an input vector and plots input vs output  
+
+- **2D Ray Tracing**  
+  - Configurable thin lenses with position and focal length  
+  - Traces multiple rays through free space and lens refractions  
+  - Saves static plot of ray paths  
+
+- **Animation**  
+  - Builds a frame-by-frame GIF showing ray propagation  
+
+
+## Contributing
+
+Contributions are welcome. Feel free to:
+
+- Open issues for bug reports or feature requests  
+- Submit pull requests with enhancements or fixes  
+- Suggest improvements to documentation or examples  
+
+
+## License
+
+This project is released under the MIT License.  
 
 
 ![](figures_polarization/polarization_jones.png)
