@@ -8,3 +8,10 @@
 
 
 ![](figures_ray_tracing/ray_propagation.gif)
+
+
+
+
+
+
+![](figures_polarization/polarization_jones.png)
